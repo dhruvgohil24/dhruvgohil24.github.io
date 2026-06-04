@@ -2,3 +2,8 @@
 *.log
 .playwright-mcp/
 node_modules/
+
+# private source (contains phone/personal email)
+main (1).tex
+main (2).tex
+personalimage.jpeg
