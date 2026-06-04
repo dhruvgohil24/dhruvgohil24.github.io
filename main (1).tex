@@ -1,0 +1,379 @@
+%-------------------------
+% Resume in Latex
+% Author : Arkadeep Das, Manas Daruka, Ayush Sharma, Abhinav Gupta
+% License : MIT
+%------------------------
+\usepackage{graphicx}
+\newcommand{\sbullet}{\raisebox{0.2ex}{\scalebox{0.7}{$\bullet$}}}
+%---- Required Packages and Functions ----
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{tfrupee}
+\usepackage{latexsym}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{fontawesome5} % for GitHub, LinkedIn icons
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{cfr-lm}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{left=1.4cm, top=0.8cm, right=1.2cm, bottom=1cm}
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{:\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} :\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+\newcommand{\resumePORS}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        {#1} & \textit{\small{#3}} \\
+        \footnotesize{#2} & 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+% \renewcommand{\labelitemii}{$\circ$}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*,labelsep=0mm]}
+\newcommand{\resumeHeadingSkillStart}{\begin{itemize}[leftmargin=*,itemsep=1.7mm, rightmargin=2ex]}
+\newcommand{\resumeItemListStart}{\begin{justify}\begin{itemize}[leftmargin=3ex, rightmargin=2ex, noitemsep,labelsep=1.2mm,itemsep=-mm]\small}
+
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{2mm}}
+\newcommand{\resumeHeadingSkillEnd}{\end{itemize}\vspace{-2mm}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\end{justify}\vspace{-3mm}}
+\newcommand{\cvsection}[1]{%
+\vspace{2mm}
+\begin{tcolorbox}
+    \textbf{\large #1}
+\end{tcolorbox}
+    \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}%
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}%
+\newcolumntype{C}{>{\centering\arraybackslash}X}%
+%---- End of Packages and Functions ------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+
+\newcommand{\name}{Dhruv Gohil} % Your Name
+\newcommand{\course}{B.Tech-Mathematics and Computing Engineering} % Your Course
+\newcommand{\roll}{240123017} % Your Roll No.
+\newcommand{\phone}{9157899095} % Your Phone Number
+\newcommand{\emaila}{d.gohil@iitg.ac.in} %Email 1
+\newcommand{\emailb}{dhruvg24@yahoo.com}
+\newcommand{\github}{dhruvgohil24} %Github
+\newcommand{\website}{https://github.com/dhruvgohil24} %Website
+\newcommand{\linkedin}{dhruvgohil2402} %linkedin
+
+
+
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+%----------HEADING-----------------
+\parbox{2.35cm}{%
+
+\includegraphics[width=2cm,clip]{iitg_logo.jpg}
+
+}\parbox{\dimexpr\linewidth-2.8cm\relax}{
+\begin{tabularx}{\linewidth}{L r}
+  \textbf{\LARGE \name} & +91-\phone\\
+  {Roll No.:\roll} & \href{mailto:\emaila}{\emaila} \\
+  \course &  \href{mailto:\emailb}{\emailb}\\
+  {Minor in Data Science and Artificial Intelligence} &  \href{https://github.com/\github}{\faGithub\ GitHub.com/\github} \\
+  {Indian Institute of Technology Guwahati} &
+  \href{https://www.linkedin.com/in/\linkedin}{\faLinkedin\ LinkedIn.com/in/dhruvgohil2402} \\
+\end{tabularx}
+}
+
+
+
+%-----------EDUCATION-----------------
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {Indian Institute of Technology Guwahati}{Guwahati, India}
+%       {Bachelor of Technology in Mathematics and Computing ;  GPA: 8.10}{July. 2015 -- July. 2019 (Expected)}
+%     \resumeSubheading
+%       {Burdwan Model School}{Burdwan, W.B}
+%       {Central Board of Secondary Education (Class XII);  Percentage: 96.60}{March. 2015}
+%   \resumeSubHeadingListEnd\vspace{-3mm}
+\vspace{-2mm}
+\section{Education}
+\setlength{\tabcolsep}{5pt} % Default value: 6pt
+% \renewcommand{\arraystretch}{1.1} % Default value: 1
+\small{\begin{tabularx}
+{\dimexpr\textwidth-3mm\relax}{|c|C|c|c|}
+  \hline
+  \textbf{Degree/Certificate } & \textbf{Institute/Board} & \textbf{CGPA/Percentage} & \textbf{Year}\\
+  \hline
+  B.Tech. Major & Indian Institute of Technology Guwahati & 8.64 (Current) & 2024-Present\\
+  % \hline
+  % B.Tech. Minor & Indian Institute of Technology Guwahati & 8.00 (Current) & 2025-Present\\ %Optional
+  \hline
+  Senior Secondary & CBSE Board & 96.8\% & 2024 \\
+  \hline
+  Secondary & CBSE Board & 96.8\% & 2022 \\
+  \hline
+\end{tabularx}}
+\vspace{-3mm}
+
+%-----------PROJECTS-----------------
+\section{Projects}
+\resumeSubHeadingListStart
+    
+    \resumeProject
+      {Algorithmic Strategy Development on Multi-Feature Time Series} %Project Name
+      {\textbf{Inter IIT} Tech Meet 14.0, IIT Patna} %Project Name, Location Name
+      {Oct - Dec. 2025} %Event Dates
+      {\href{https://github.com/dhruvgohil24/Dhruv-Inter-final}{\faGithub\ bit.ly/RLtrading}} %Website
+      \resumeItemListStart
+       
+        \item {Designed and trained a \textbf{PPO-based Actor--Critic Reinforcement Learning agent} with parallel rollouts and reward shaping for intraday algorithmic trading on high-frequency multi-feature
+time-series data under realistic constraints.}
+        \item {Delivered \textbf{81.61\% (EBX)} and \textbf{77.97\% (EBY)} annualized returns with a \textbf{\(\sim\)69\% win rate} and \textbf{\(\sim\)1.2\% maximum drawdown} on unseen test data EBX and EBY, and exceptional performance on live real world stocks and indices.}
+      \resumeItemListEnd
+
+    \resumeProject
+      {Autonomous Neural-Graph Retrieval Engine (Agentic GraphRAG)} %Project Name
+      {Guided by : Prof. Shyamanta M. Hazarika, IIT Guwahati} %Project Name, Location Name
+      {Feb. - Apr. 2026} %Event Dates
+       {\href{https://github.com/dhruvgohil24/AgenticGraphRag}{\faGithub\ bit.ly/GraphRAG}} %Website
+      \resumeItemListStart
+  \item{Architected a \textbf{Hybrid RRF Retrieval Engine} parallelising async \textbf{Neo4j} graph
+  traversal and \textbf{ChromaDB} vector search, fusing cross-database ranked results via \textbf{Reciprocal}
+  \textbf{Rank Fusion} for deterministic, multi-hop reasoning .}
+
+  \item{Engineered a \textbf{DSPy-inspired} self-correction loop scoring
+Groundedness, Context Relevance, and Answer Completeness,
+achieving \textbf{80\% pass rate} on a \textbf{Ragas-equivalent} 20-question
+benchmark with \textbf{zero hallucinations}.}
+\resumeItemListEnd
+    \resumeProject
+      {Intraday Momentum based Trading Strategy on Nifty 100 Stocks} %Project Name
+      {\textbf{Gold Medal}, Inter IIT Bootcamp, Techboard, IIT Guwahati} %Project Name, Location Name
+      {Oct. 2025} %Event Dates
+      {\href{https://github.com/dhruvgohil24/Inter_BootCamp}{\faGithub\ bit.ly/IntradayStrat}} %Website
+      \resumeItemListStart
+        
+        \item {Built a composite momentum scoring model using technical indicators and \textbf{multi-output XGBoost regression} to rank, filter, and select \textbf{top-performing in-momentum} stocks on a daily basis and apply systematic trading strategy.}
+        \item {Achieved \textbf{20.61\% annualized return} with a \textbf{Sharpe ratio of 2.75}, \textbf{Sortino ratio of 3.86}, and \textbf{5.24\% maximum drawdown} over a \textbf{13-month backtest}, significantly outperforming the \textbf{Nifty 100} benchmark (-3.61\%).}
+      \resumeItemListEnd
+      \resumeProject
+      {Other Projects:} %Project Name
+      {} %Project Name, Location Name
+      {} %Event Dates
+      {} %Website
+     \vspace{-4mm}
+      \resumeItemListStart
+        
+      \item \textbf{Black–Litterman Model}~\href{https://github.com/dhruvgohil24/Portfolio-Optimization---Black-Litterman}{\textnormal{\scriptsize\faExternalLink*}} :
+Implemented the Black–Litterman framework for \textbf{Portfolio Optimization.}
+
+
+      \resumeItemListEnd
+      \vspace{-1.5mm}
+      \resumeItemListStart
+        
+      \item \textbf{All Candlestick Pattern Recogniser}~
+\href{https://www.tradingview.com/script/8hegUf90-All-pattern-recognizer-by-Dhruv/}{\textnormal{\scriptsize\faExternalLink*}} :
+Advanced Candlestick Pattern detector using \textbf{PineScript} on \textbf{TradingView}.
+
+      \resumeItemListEnd
+      
+      
+    % \resumeProject
+    %   {Project Name 2}
+    %   {6th Inter IIT TechMeet, IIT Madras}{Dec. 2017 - Jan. 2018}{\href{Links to Reports}{Reports}}
+    %   \resumeItemListStart
+    % \item {Work DOne 1}
+    %     \item {Work Done 2}
+    % \resumeItemListEnd
+      
+  \resumeSubHeadingListEnd
+\vspace{-7.5mm}
+
+
+\section{Achievements}
+\vspace{-0.2mm}
+\resumeSubHeadingListStart
+\resumePOR{IMC Prosperity 4.0} % Award
+    { Secured \textbf{World Rank 1} out of \textbf{22000+} teams in Manual Trading Round 2.} % Event
+    {2026} %Event Year
+\resumePOR{Inter IIT Tech Meet 14.0} % Award
+    { Secured \textbf{Rank 6} out of 23 teams from various IITs in the Quant Finance PS.} % Event
+    {2025} %Event Year
+  
+\resumePOR{Inter IIT Tech Bootcamp} % Award
+    { Secured \textbf{Rank 1} out of 12 teams from IITG in the Quant Finance PS.} % Event
+    {2025} %Event Year
+     \resumePOR{Kriti - Inter Hostel Tech Competition} % Award
+    { Secured \textbf{Rank 2} in the Quant Finance Problem Statement.} % Event
+    {2026} %Event Year 
+   \resumePOR{Kriti - Inter Hostel Tech Competition} % Award
+    { Secured \textbf{Rank 3} in the Route Optimisation Problem Statement.} % Event
+    {2026} %Event Year 
+\resumePORS{\textbf{Codeforces}: Peak rating - \textbf{1568} | \textbf{Specialist} | Handle - \href{https://codeforces.com/profile/dhruvgohil}{\textit{dhruvgohil}}}
+{      - \href{https://codeforces.com/contest/2220/standings}{{Codeforces Round 1093 (Div. 2)}} Secured \textbf{Global Rank 643} among 23,000+ participants.}
+{}
+\vspace{-0.5mm}
+% \resumePOR{JEE Advanced} % Award
+%     { Ranked among the \textbf{top 950} candidates, out of 1,80,000+ candidates.} %Event Year
+%     {2024}
+% \resumePOR{JEE Mains} % Award
+%     { Ranked among the \textbf{top 1350} candidates, out of 15,00,000+ candidates.} % Event
+%     {2024} %Event Year
+
+\resumePOR{MNAnalyse} % Award
+    { Achieved \textbf{Pan India Rank of 8} in Mergers and Acquisitions Case Competition. } % Event
+    {2025} %Event Year
+
+
+\resumePOR{Reliance Foundation} % Award
+    { Awarded Scholarship worth \textbf{Rs. 2 Lakhs}. } % Event
+    {2025} %Event Year
+
+    \resumePOR{Toastmasters International} % Award
+    { Competent Gavelier Communicator Award for completing 10 speeches \textbf{(1st all)}} % Event
+    {2019} %Event Year
+
+    \resumePOR{CBSE Chess Nationals} % Award
+    { Represented school \textbf{Twice} at the CBSE Chess Nationals.} % Event
+    {2019, 2020} %Event Year
+\resumeSubHeadingListEnd
+\vspace{-6.3mm}
+
+\section{Technical Skills}
+\begin{tabularx}{\textwidth}{@{}X X@{}}
+  \sbullet\ \textbf{Programming}: C/C++, PineScript, Python*, Verilog &
+  \sbullet\ \textbf{Libraries}: NumPy, Pandas, Matplotlib, Seaborn \\
+  \sbullet\ \textbf{Finance}: Quantitative Analysis, Portfolio Optimization &
+  \sbullet\ \textbf{Operating Systems}: Windows, Linux* \\
+\end{tabularx}
+
+\vspace{-3mm}
+\begin{flushright}
+\footnotesize\textit{* Elementary proficiency}
+\end{flushright}
+
+\vspace{-10mm}
+\section{Key courses taken}
+\resumeHeadingSkillStart
+\resumeSubItem{Computer Science}
+ {Introduction to Computing, Data Structures and Algorithms, Design and Analysis of Algorithms, Database Management Systems*, Computer Architecture and Organization}
+ \resumeSubItem{Mathematics} % Category
+    {Probability Theory and Random Processes, Linear Algebra, Discrete Mathematics}
+ \resumeSubItem{Finance and Economics} % Category
+    {Financial Engineering-1*, Introductory Options, Economics of Health and Education*}
+%  \resumeSubItem{Electrical and Electronics} % Category
+%     {Advanced Control Systems, Digital Systems, Microprocessors} % Skills
+\vspace{-1mm}
+\begin{flushright}
+\footnotesize\textit{* Awarded AS/AA Grade (10/10)}
+\end{flushright}
+
+ \resumeHeadingSkillEnd
+\vspace{-8.5mm}
+
+\section{Positions of Responsibility}
+\vspace{-1mm}
+\resumeSubHeadingListStart
+\resumePOR{Department Internship Representative} % Position
+    { Center for Career Development, IIT Guwahati} % Clubs
+    {Mar. 2026 - Present} % Tenure Period
+\vspace{-0.5mm}
+    \resumeItemListStart
+        \item {Serving as \textbf{primary} \textbf{liaison} between the \textbf{Mathematics and Computing batch} and the \textbf{Center for Career Development}.}
+        
+    \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-4mm}
+
+\hspace*{-5mm}\rule{1.035\textwidth}{0.1mm}
+
+
+%-------------------------------------------
+\end{document}
