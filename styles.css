@@ -241,6 +241,7 @@ ul { list-style: none; padding: 0; }
 
 .medal { font-size: 11px; vertical-align: middle; padding: 3px 9px; border-radius: 20px; margin-left: 8px; white-space: nowrap; }
 .medal--gold { background: #f6d36511; color: #9a7400; border: 1px solid #d9af3a55; }
+.medal--silver { background: #9aa3ad14; color: #6b7280; border: 1px solid #9aa3ad66; }
 .medal--bronze { background: #c97b4011; color: #9c5a23; border: 1px solid #c97b4055; }
 
 .metrics { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
@@ -299,6 +300,10 @@ ul { list-style: none; padding: 0; }
 .awards li.award--link a:hover { background: rgba(48, 128, 255, .11); }
 .awards li.award--link:hover { background: none; }
 .awards__go { margin-left: auto; color: var(--blue); align-self: center; }
+
+/* lightly highlighted (non-link) standout award, e.g. JEE */
+.awards li.award--hi { background: rgba(226, 83, 39, .06); box-shadow: inset 3px 0 0 var(--orange); }
+.awards li.award--hi:hover { background: rgba(226, 83, 39, .09); }
 
 /* ---------- stack ---------- */
 .stack__grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 5vw, 64px); }

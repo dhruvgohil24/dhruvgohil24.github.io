@@ -7,3 +7,8 @@ node_modules/
 main (1).tex
 main (2).tex
 personalimage.jpeg
+
+# raw uploaded CV variants (keep local; Dhruv_Gohil_Resume.pdf is the published one)
+assets/1.Quant-*.pdf
+assets/2.SDE-*.pdf
+assets/3.AIDS-*.pdf
